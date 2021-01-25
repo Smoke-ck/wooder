@@ -1,0 +1,42 @@
+.aboutUs {
+    &__container {
+        max-width: 1240px;
+    }
+    &__content {
+        padding-left: 98px;
+    }
+    &__tittle {
+        &::before {
+            content: '';
+            left:-170px;
+            width: 140px;
+        }
+    }
+    &__description {
+        &::before {
+            content: '';
+            left: -65px;
+        }
+    }
+}
+@media(max-width:1559px) {
+    .aboutUs {
+        &__tittle {
+            &--reverse {
+                &::before {
+                    content: '';
+                    display: block;
+                }
+            }
+        }
+        &__description{
+            &::before {
+                content: '';
+                display: block;
+            }
+        }
+        &__content {
+            padding-left: 20px;
+        }
+    }
+}

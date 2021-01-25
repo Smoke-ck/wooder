@@ -1,0 +1,130 @@
+.design {
+    background-image:url(../img/design/player6_kopirovat_4098.png),
+    url(../img/design/pryamougolnik_2_kopirovat_4_3738.jpg);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat,no-repeat;
+    background-position: right,center;
+    background-size: auto,cover;
+    height: 916px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 138px;
+    &__container {
+        height: 737px;
+        width: 1560px;
+        border: 1px solid #bea67c;
+        display: flex;
+        align-items: center;
+    }
+    &__content {
+        max-width: 550px;
+        margin-left: 386px;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 151px;
+            background-color:  #ffffff;
+            right: -550px;
+            bottom: 100px;
+        }
+    }
+    &__tittle {
+        font-size: 48px;
+        line-height: 60px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        color: #bea67c;
+        margin-bottom: 44px;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 151px;
+            height: 1px;
+            background-color:  #ffffff;
+            top:25%;
+            left:-180px;
+        }
+    }
+    &__description {
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+        margin-bottom: 34px;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 44px;
+            height: 4px;
+            background-color: #bea67c;
+            top:10px;
+            left:-65px;
+        }
+    }
+    &__button {
+        margin: 0;
+        &::before {
+            content: url(../img/design/player6_3749.png);
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    }
+    &__button-tittle {
+        &::before {
+            content:'';
+            display: none;
+        }
+        &::after {
+            content: '';
+            display: none;
+        }
+    }
+}
+@media(max-width:1559px) {
+    .design {
+        background-position: center,center;
+        &__container {
+            justify-content: center;
+        }
+        &__content {
+            margin-left: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 10px;
+            &::after {
+                content: '';
+                display: none;
+            }
+        }
+    }
+}
+@media(max-width:767px) {
+    .design {
+        &__tittle {
+            text-align: center;
+            font-size: 30px;
+            line-height: 30px;
+            &::before {
+                content: '';
+                display: none;
+            }
+        }
+        &__description {
+            &::before {
+                content: '';
+                display: none;
+            }
+        }
+    }
+}

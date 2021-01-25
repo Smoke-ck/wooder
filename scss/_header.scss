@@ -1,0 +1,264 @@
+.container {
+    max-width: 1560px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:'ProximaNova';
+}
+.header {
+    height: 1042px;
+    background-image: 
+    url(../img/back/pryamougolnik_2_4338.jpg),
+    url(../img/back/pryamougolnik_2_3292.jpg);
+    background-repeat: no-repeat,no-repeat;
+    background-size: auto, cover ;
+    background-position: right center, left center;
+    background-clip: border-box, content-box;
+    padding-bottom: 42px;
+    margin-bottom: 90px;
+    &__head {
+        display: flex;
+        padding-left: 525px;
+        padding-top: 30px;
+        margin-bottom: 200px;
+    }
+    &__head-list {
+        display:flex;
+    }
+    &__head-tittle {
+        font-size: 36px;
+        line-height: 1.2;
+        font-weight:  700;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        color: #ffffff;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 4px;
+            background-color: #bea67c;
+            top:40%;
+            left:45px;
+        }
+    }
+    &__head-click {
+        text-decoration: none;
+        font-size: 15px;
+        line-height: 27px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        color: #838281;
+        margin-left: 100px;
+        &:hover {
+            color: #bea67c;
+        }
+    }
+    &__number {
+        font-size: 52.4px;
+        line-height: 58px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #bea67c;
+        writing-mode: vertical-lr;
+        margin-right: 250px;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            width: 51px;
+            height: 4px;
+            background-color: #c0af91;
+            border-radius: 2px;
+            position:absolute;
+            transform: rotate(90deg);
+            top:-30px;
+            left:5px;
+        }
+        &::after {
+            content: url(../img/arrow/ellips_2_4346.png);
+            position:absolute;
+            top:100px;
+        }
+        &--after {
+            position: relative;
+            &::after {
+                content: url(../img/arrow/ellips_2_4347.png);
+                position: absolute;
+                top:150px;
+            }
+            &::before {
+                content: url(../img/arrow/ellips_2_4347.png);
+                position: absolute;
+                top:200px;
+            }
+        }
+    }
+    &__tittle {
+        font-size: 100px;
+        line-height: 99px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #bea67c;
+        text-align: center;
+    }
+    &__furniture {
+        opacity: 0.2;
+        font-size: 13.7px;
+        line-height: 56px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #a9946e;
+        writing-mode: vertical-lr;
+        margin-top: 100px;
+    }
+    &__description {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__button {
+        width: 307px;
+        height: 58px;
+        border: 1px solid #ffffff;
+        display: flex;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0);
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__button:hover &__button-tittle {
+        color:#a9946e;
+    }
+    &__button-tittle {
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+        position: relative;
+        text-decoration: none;
+        &::before {
+            content:'';
+            display: block;
+            width: 34px;
+            height: 2px;
+            background-color: #ffffff;
+            position:absolute;
+            left:120px;
+            width: 34px;
+            top:48%;
+        }
+        &::after {
+            content: url(../img/arrow/pryamougolnik_16_kopirovat_6_4352.png);
+            position:absolute;
+            left:150px;
+            top:0;
+        }
+    }
+    &__mouse {
+        font-size: 30px;
+        color: #ffffff;
+        margin-left: 630px;
+        margin-bottom: 120px;
+    }
+    &__scroll {
+        position: relative;
+        font-size: 14px;
+        line-height: 69px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+        writing-mode: vertical-lr;
+        margin-left: 605px;
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 1px;
+            height: 74px;
+            background-color: #ffffff;
+            top:-100px;
+            left:50%
+        }
+        &::after {
+            content: url(../img/arrow/pryamougolnik_16_kopirovat_6_4181.png);
+            position: absolute;
+            top:-30px;
+            left:1px;
+        }
+    }
+}
+@media (max-width:1559px) {
+    .header {
+        &__head {
+            justify-content: center;
+            padding: 20px 10px;
+            margin-bottom: 100px;
+        }
+        &__number {
+            margin-right: 0;
+        }
+        &__description {
+            margin-bottom: 30px;
+        }
+        &__mouse {
+            margin-left: 230px;
+        }
+        &__scroll {
+            margin-left: 205px;
+        }
+    }
+}
+@media(max-width:767px) {
+    .header {
+        height: 700px;
+        margin-bottom: 50px;
+        &__head-click {
+            margin-left: 10px;
+            font-size: 12px;
+        }
+        &__head-tittle {
+            font-size: 20px;
+            line-height: 1.2;
+            &::before {
+                content: '';
+                left:20px;
+                top:35%;
+            }
+        }
+        &__number {
+            display: none;
+        }
+        &__tittle {
+            font-size: 50px;
+            line-height: 50px;
+            margin-bottom: 50px;
+        }
+        &__furniture {
+            display: none;
+        }
+        &__button {
+            width: 250px;
+            height: 40px;
+            margin-bottom: 20px;
+        }
+        &__mouse {
+            margin-left: 160px;
+        }
+        &__scroll {
+            margin-left: 135px;
+        }
+    }
+}

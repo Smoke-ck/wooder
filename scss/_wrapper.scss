@@ -1,0 +1,220 @@
+.wrapper {
+    overflow: hidden;
+    &__container {
+        max-width: 1240px;
+        margin-bottom: 30px;
+    }
+    &__card {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 280px;
+        &--reverse {
+            flex-direction: row-reverse;
+        }
+    }
+    &__block {
+        width: 50%;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        &--reverse {
+            align-items:flex-start;
+        }
+    }
+    &__img {
+        width: 50%;
+        object-fit:cover;
+    }
+    &__content {
+        max-width: 400px;
+        padding-right: 48px;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        &--reverse {
+            padding-right: 0;
+            padding-left: 48px;
+            align-items: flex-end;
+        }
+    }
+    &__tittle {
+        font-size: 48px;
+        line-height: 70px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: #010101;
+        position:relative;
+        &::before {
+            content: '';
+            display: block;
+            width: 151px;
+            height: 1px;
+            background-color: #000000;
+            position: absolute;
+            top:50%;
+            left:-160px;
+        }
+        &--reverse {
+            &::before {
+                content: '';
+                left:190px;
+            }
+        }
+    }
+    &__description{
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #464646;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            width: 44px;
+            height: 4px;
+            background-color: #bea67c;
+            position: absolute;
+            top:10px;
+            left:-60px;
+        }
+        &--reverse {
+            &::before {
+                content: '';
+                left:360px;
+            }
+        }
+    }
+    &__link {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 70px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #000000;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position:absolute;
+            width: 33px;
+            height: 1px;
+            background-color: #bea67c;
+            top:50%;
+            left:120px;
+        }
+        &::after {
+            content: url(../img/arrow/pryamougolnik_16_4065.png);
+            position:absolute;
+            left:150px;
+        }
+    }
+    &__click {
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 44px;
+            height: 2px;
+            background-color: #a9946e;
+            bottom:20px;
+        }
+    }
+    &__number {
+        align-self: start;
+        font-size: 36px;
+        line-height: 100px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.075em;
+        color: #000000;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 4px;
+            height: 51px;
+            background-color: #a9946e;
+            left:30%;
+            
+        }
+        &--reverse {
+            align-self: flex-end;
+        }
+    }
+}
+@media(max-width:1559px) {
+    .wrapper {
+        &__card {
+            margin-bottom: 100px;
+        }
+        &__block {
+            width: 100%;
+            align-items: center;
+        }
+        &__content {
+            padding-right: 20px;
+            padding-left: 5px;
+            &--reverse {
+                padding-right: 5;
+                padding-left: 20px;
+                align-items: flex-start;
+            }
+        }
+        &__click {
+            align-self: start;
+        }
+        &__tittle {
+            &::before {
+                content: '';
+                width: 60px;
+                left:-65px;
+            }
+            &--reverse {
+                &::before {
+                    content: '';
+                    left:190px;
+                }
+            }
+        }
+        &__description{
+            &::before {
+                content: '';
+                display: none;
+                
+            }
+        }
+    }
+}
+@media(max-width:767px) {
+    .wrapper {
+        &__card {
+            flex-direction: column;
+        }
+        &__img {
+            width:100%
+        }
+       
+        &__content {
+            width: 100%;
+            align-items: flex-start;
+            padding-top: 0;
+            padding-right: 10px;
+        }
+        &__number {
+            padding-left: 10px;
+            &::after {
+                content: '';
+                display: none;
+            }
+            &--reverse {
+                padding-right: 10px;
+                padding-left: 0;
+            }
+        }
+    }
+}

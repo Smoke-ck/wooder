@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    min-width: 320px;
+}
+
+@import "fonts";
+@import "header";
+@import "wrapper";
+@import "quality";
+@import "design";
+@import "aboutUs";
+@import "footer";

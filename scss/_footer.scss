@@ -1,0 +1,40 @@
+.footer {
+    background-color: #050505;
+    &__container {
+        max-width:1240px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    &__date {
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #464646;
+    }
+    &__description {
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #464646;
+        &--other {
+            color: #7d7d7d;
+        }
+    }
+}
+@media(max-width:767px) {
+    .footer {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+        &__date {
+            display: none;
+        }
+        &__description {
+            display: none;
+        }
+    }
+}
